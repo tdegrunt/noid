@@ -1,0 +1,10 @@
+{
+  "name": "noid",
+  "version": "0.0.1",
+  "directories" : { "build" : "./build" },
+  "main" : "./build/noid",
+  "dependencies": {
+    "mongodb": "",
+    "underscore": ""
+  }
+}
