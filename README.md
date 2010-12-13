@@ -3,7 +3,8 @@ Noid
 
 Noid is an ODM (object document mapper) for MongoDB and Node.js written in CoffeeScript.
 
-Example:
+Example
+-------
 
     class Person extends Document
 
@@ -14,3 +15,18 @@ Example:
 
     Person.findFirst { name: 'Chris' }, (error, person) ->
       console.log person.name()
+
+Documentation
+-------------
+
+See the [integration specs](https://github.com/chrisgibson/noid/tree/master/spec/integration) for now... 
+
+About
+-----
+
+Noid intends to provide a clean way to setup mappings (intended to be created in CoffeeScript, though not required). It is obviously inspired by Mongoid and the api will likely mirror that of Mongoids', barring any idiomatic deviations.
+
+Credits
+-------
+
+Durran Jordan / Mongoid
