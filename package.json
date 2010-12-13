@@ -1,5 +1,6 @@
 {
   "name": "noid",
+  "description": "ODM for MongoDB with CoffeeScript",
   "version": "0.0.1",
   "author": "Chris Gibson",
   "repository": {
