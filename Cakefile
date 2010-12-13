@@ -5,10 +5,10 @@ print = (data) -> util.print data.toString()
 
 task 'build', 'Compile coffeescript files', () ->
   invoke 'spec'
-  exec 'rm -rf build', (error, stdout, stderr) ->
-    exec 'mkdir build && mkdir build/noid', (error, stdout, stderr) ->
-      exec 'coffee -c -o build lib/*.coffee', (error, stdout, stderr) ->
-        exec 'coffee -c -o build/noid lib/noid/*.coffee', (error, stdout, stderr) ->
+  exec 'rm -rf lib', (error, stdout, stderr) ->
+    exec 'mkdir lib && mkdir lib/noid', (error, stdout, stderr) ->
+      exec 'coffee -c -o lib src/*.coffee', (error, stdout, stderr) ->
+        exec 'coffee -c -o lib/noid src/noid/*.coffee', (error, stdout, stderr) ->
 
 task 'npmlink', 'Link project w/ NPM', () ->
   invoke 'build'

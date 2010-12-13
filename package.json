@@ -1,8 +1,15 @@
 {
   "name": "noid",
   "version": "0.0.1",
-  "directories" : { "build" : "./build" },
-  "main" : "./build/noid",
+  "author": "Chris Gibson",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/chrisgibson/noid"
+  },
+  "directories" : {
+    "lib" : "./lib"
+  },
+  "main" : "./lib/noid",
   "dependencies": {
     "mongodb": "",
     "underscore": ""

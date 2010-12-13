@@ -1,5 +1,5 @@
 require.paths.unshift __dirname + '/../node_modules'
-require.paths.unshift __dirname + '/../lib'
+require.paths.unshift __dirname + '/../src'
 require.paths.unshift __dirname + '/../spec'
 
 global.util = require('util')
