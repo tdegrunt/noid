@@ -10,7 +10,7 @@ global._ = require('underscore')._
 Noid = require('noid').Noid
 
 Noid.configure {
-  name: 'docstore_test',
+  db: 'noid_test',
   host: 'localhost'
 }
 

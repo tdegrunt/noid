@@ -53,25 +53,27 @@ class Document
     @save(callback)
 
   @field: (name) ->
-    @::['fields'] ?= []
-    @::['fields'] << name
     @::[name] = (val) ->
       if arguments.length > 0
         @attributes[name] = val
       else
         @attributes[name]
 
+  @storeIn: (collection_name) ->
+    @::_storeIn = collection_name
+
   @_ensureCollectionIsSetup = (callback) ->
     self = this
+    collectionName = @::._storeIn ? self.name.toString()
     Noid.db (error, db) ->
       if error?
         callback 'Error establishing database connection: ' + error, null
         return
-      db.createCollection self.name.toString(), (error) ->
+      db.createCollection collectionName, (error) ->
         if error?
           callback 'Error creating collection: ' + error, null
           return
-        db.collection self.name.toString(), (error, collection) ->
+        db.collection collectionName, (error, collection) ->
           if error?
             callback 'Error using collection: ' + error, null
             return
