@@ -21,7 +21,9 @@ Example
 Documentation
 -------------
 
-See the [integration specs](https://github.com/chrisgibson/noid/tree/master/spec/integration) for now... 
+    npm install noid
+
+See the [integration specs](https://github.com/chrisgibson/noid/tree/master/spec/integration) for now...
 
 About
 -----
