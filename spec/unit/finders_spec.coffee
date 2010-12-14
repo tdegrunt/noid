@@ -1,10 +1,15 @@
 require '../spec_helper'
 
-vows = require 'vows'
-assert = require 'assert'
-
 Person = require('models/person').Person
 
 describe 'finders', () ->
+
   describe '.all', () ->
-    expect(typeof(Person.all)).toBe('function')
+
+    it 'is a function', () ->
+      expect(typeof(Person.all)).toBe('function')
+
+  describe '.find', () ->
+
+    it 'is a function', () ->
+      expect(typeof(Person.find)).toBe('function')
