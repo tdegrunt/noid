@@ -1,7 +1,7 @@
 {
   "name": "noid",
   "description": "ODM for MongoDB with CoffeeScript",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "author": "Chris Gibson",
   "repository": {
     "type": "git",
@@ -12,6 +12,7 @@
   },
   "main" : "./lib/noid",
   "dependencies": {
+    "lingo": "",
     "mongodb": "",
     "underscore": ""
   }

@@ -1,5 +1,6 @@
 util = require('util')
 _ = require('underscore')._
+en = require('lingo').en
 
 ObjectID = require('mongodb/bson/bson').ObjectID
 
@@ -64,6 +65,8 @@ class Document
 
   @_ensureCollectionIsSetup = (callback) ->
     self = this
+    # Pluralize and downcase class name for the collection name if storeIn not already set
+    @::.storeIn ||= en.pluralize(self.name.toString()).toLowerCase()
     collectionName = @::._storeIn ? self.name.toString()
     Noid.db (error, db) ->
       if error?

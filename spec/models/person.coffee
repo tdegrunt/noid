@@ -3,8 +3,6 @@ Document = require('noid/document').Document
 
 class Person extends Document
 
-  @storeIn 'people'
-
   @field 'ssn'
   @field 'title'
 
